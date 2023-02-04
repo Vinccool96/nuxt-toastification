@@ -1,6 +1,8 @@
 import { defineNuxtModule, addPlugin, createResolver } from "@nuxt/kit"
 import type { PluginOptions } from "vue-toastification"
 
+export * from "./importWrapper"
+
 export type ToastificationOptions = PluginOptions
 
 export default defineNuxtModule<ToastificationOptions>({
