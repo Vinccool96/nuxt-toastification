@@ -14,6 +14,6 @@ export default defineNuxtModule<PluginOptions>({
     nuxt.options.runtimeConfig.public.toastification = options
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
-    addPlugin(resolver.resolve("./runtime/plugin"))
+    addPlugin(resolver.resolve("./runtime/plugin.client"))
   },
 })

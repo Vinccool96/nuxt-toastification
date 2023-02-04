@@ -9,7 +9,10 @@ export default defineNuxtPlugin((nuxtApp) => {
   const { toastification: options }: { options: PluginOptions } = nuxtApp.payload.config.public
 
   nuxtApp.vueApp.use(Toaster, options)
-  const toast = useToast()
 
-  nuxtApp.provide("toast", toast)
+  return {
+    provide: {
+      toast: useToast(),
+    },
+  }
 })

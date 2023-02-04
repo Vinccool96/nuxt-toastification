@@ -3,6 +3,7 @@
 </template>
 
 <script setup lang="ts">
+import { useNuxtApp } from "#app"
 import { POSITION, TYPE } from "vue-toastification"
 const { $toast } = useNuxtApp()
 
