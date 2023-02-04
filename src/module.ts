@@ -1,8 +1,9 @@
 import { defineNuxtModule, addPlugin, createResolver } from "@nuxt/kit"
+import type { PluginOptions } from "vue-toastification"
 
-import { PluginOptions } from "vue-toastification"
+export type ToastificationOptions = PluginOptions
 
-export default defineNuxtModule<PluginOptions>({
+export default defineNuxtModule<ToastificationOptions>({
   meta: {
     name: "toastification",
     configKey: "toastification",
