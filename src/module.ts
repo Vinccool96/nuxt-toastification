@@ -13,6 +13,7 @@ export default defineNuxtModule<ToastificationOptions>({
   setup(options, nuxt) {
     const resolver = createResolver(import.meta.url)
     nuxt.options.runtimeConfig.public.toastification = options
+    nuxt.options.build.transpile.push("./runtime")
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
     addPlugin(resolver.resolve("./runtime/plugin.client"))

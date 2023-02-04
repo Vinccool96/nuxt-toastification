@@ -16,3 +16,17 @@ export default defineNuxtPlugin((nuxtApp) => {
     },
   }
 })
+
+export type ToastType = ReturnType<typeof useToast>
+
+declare module "#app" {
+  interface NuxtApp {
+    $toast: ToastType
+  }
+}
+
+declare module "vue" {
+  interface ComponentCustomProperties {
+    $toast: ToastType
+  }
+}
