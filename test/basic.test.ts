@@ -5,7 +5,6 @@ import { createPage, setup } from "@nuxt/test-utils"
 
 describe("ssr", async function () {
   await setup({
-    // @ts-ignore
     rootDir: fileURLToPath(new URL("./fixtures/basic", import.meta.url)),
   })
 
